@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: Honeydew;
+  font-family: 'Permanent Marker';
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.watermelonWithBites {
+  position: relative;
+  width: 200px;
+  min-height: 200px;
+}
+
+.watermelon {
+  border: 10px solid green;
+  border-radius: 200px;
+  background-color: pink;
+  width: 200px;
+  min-height: 200px;
+  position: relative;
+}
+
+.half {
+  background-color: Honeydew;
+  left: -10px;
+  top: -10px;
+  position: absolute;
+  width: 220px;
+  min-height: 120px;
+}
+
+.seeds {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100px;
+}
+
+.seed {
+  width: 7px;
+  min-height: 13px;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.seed:nth-child(1), .seed:nth-child(3) {
+  margin-bottom: 10px;
+}
+
+.seed:nth-child(2) {
+  margin-top: 10px;
+}
+
+.bites {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 200px;
+  min-height: 100px;
+  z-index: 2;
+}
+
+.bite {
+  position: absolute;
+  background-color: transparent;
+  width: 40px;
+  min-height: 40px;
+  border-radius: 40px;
+  left: 24px;
+  -webkit-animation-name: takeBite;
+          animation-name: takeBite;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-timing-function: step-start;
+          animation-timing-function: step-start;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.bite:nth-child(1) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.bite:nth-child(2) {
+  left: 84px;
+  top: 12px;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+
+.bite:nth-child(3) {
+  left: 144px;
+  top: 8px;
+  -webkit-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+}
+
+.bite:nth-child(4) {
+  left: 52px;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
+}
+
+.bite:nth-child(5) {
+  left: 112px;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.bite:nth-child(6) {
+  top: 20px;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+
+.bite:nth-child(7) {
+  top: 34.4px;
+  left: 56px;
+  -webkit-animation-delay: 5.1s;
+          animation-delay: 5.1s;
+}
+
+.bite:nth-child(8) {
+  top: 30px;
+  left: 114px;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+.bite:nth-child(9) {
+  top: 40px;
+  left: 80px;
+  -webkit-animation-delay: 6.6s;
+          animation-delay: 6.6s;
+}
+
+.bite:nth-child(10) {
+  top: 40px;
+  left: 100px;
+  -webkit-animation-delay: 7.2s;
+          animation-delay: 7.2s;
+}
+
+@-webkit-keyframes takeBite {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: Honeydew;
+  }
+}
+
+@keyframes takeBite {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: Honeydew;
+  }
+}

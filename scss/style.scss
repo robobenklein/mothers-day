@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+$backgroundColor: Honeydew;
+body {
+  background-color: $backgroundColor;
+  font-family: 'Permanent Marker';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+$watermelonDiameter: 200px;
+$rindWidth: 10px;
+.watermelonWithBites {
+  position: relative;
+  width: $watermelonDiameter;
+  min-height: $watermelonDiameter;
+}
+.watermelon {
+  border: $rindWidth solid green;
+  border-radius: $watermelonDiameter;
+  background-color: pink;
+  width: $watermelonDiameter;
+  min-height: $watermelonDiameter;
+  position: relative;
+}
+.half {
+  background-color: $backgroundColor;
+  left: -$rindWidth;;
+  top: -$rindWidth;
+  position: absolute;
+  width: $watermelonDiameter + (2 * $rindWidth);
+  min-height: $watermelonDiameter * .6;
+}
+.seeds {
+  position: absolute;
+  bottom: $rindWidth * 4;
+  left: $watermelonDiameter/4;
+  display: flex;
+  justify-content: space-between;
+  width: $watermelonDiameter/2;
+}
+.seed {
+  width: $rindWidth * .7;
+  min-height: $rindWidth * 1.3;
+  border-radius: $rindWidth;
+  background-color: black;
+}
+.seed:nth-child(1), .seed:nth-child(3) {
+  margin-bottom: 10px;
+}
+.seed:nth-child(2) {
+  margin-top: 10px;
+}
+$biteTop: $watermelonDiameter/2;
+.bites {
+  position: absolute;
+  top: $biteTop;
+  left: 0;
+  width: $watermelonDiameter;
+  min-height: $watermelonDiameter/2;
+  z-index: 2;
+}
+$biteSize: 4 * $rindWidth;
+.bite {
+  position: absolute;
+  background-color: transparent;
+  width: $biteSize;
+  min-height: $biteSize;
+  border-radius: $biteSize;
+  left: $biteSize * .6;
+  animation-name: takeBite;
+  animation-duration: .5s;
+  animation-timing-function: step-start;
+  animation-fill-mode: forwards;
+}
+.bite:nth-child(1) {
+  animation-delay: 1s;
+}
+.bite:nth-child(2) {
+  left: $biteSize * 2.1;
+  top: $biteSize * .3;
+  animation-delay: 1.7s;
+}
+.bite:nth-child(3) {
+  left: $biteSize * 3.6;
+  top: $biteSize * .2;
+  animation-delay: 2.25s;
+}
+.bite:nth-child(4) {
+  left: $biteSize * 1.3;
+  animation-delay: 3.1s;
+}
+.bite:nth-child(5) {
+  left: $biteSize * 2.8;
+  animation-delay: 4s;
+}
+.bite:nth-child(6) {
+  top: $biteSize * .5;
+  animation-delay: 4.5s;
+}
+.bite:nth-child(7) {
+  top: $biteSize * .86;
+  left: $biteSize * 1.4;
+  animation-delay: 5.1s;
+}
+.bite:nth-child(8) {
+  top: $biteSize * .75;
+  left: $biteSize * 2.85;
+  animation-delay: 6s;
+}
+.bite:nth-child(9) {
+  top: $biteSize;
+  left: $biteSize * 2;
+  animation-delay: 6.6s;
+}
+.bite:nth-child(10) {
+  top: $biteSize;
+  left: $biteSize * 2.5;
+  animation-delay: 7.2s;
+}
+@keyframes takeBite {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: $backgroundColor;
+  }
+}
